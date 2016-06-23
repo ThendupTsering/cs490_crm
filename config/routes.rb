@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :customers
+  resources :clients
   root :to => "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

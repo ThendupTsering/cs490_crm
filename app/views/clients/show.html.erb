@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @client.address %>
+</p>
+
+<p>
+  <strong>Entity type:</strong>
+  <%= @client.entity_type %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Phone no:</strong>
+  <%= @client.phone_no %>
+</p>
+
+<p>
+  <strong>Fax no:</strong>
+  <%= @client.fax_no %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @client.gender %>
+</p>
+
+<p>
+  <strong>Career:</strong>
+  <%= @client.career %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @client.birthday %>
+</p>
+
+<p>
+  <strong>Entry point:</strong>
+  <%= @client.entry_point %>
+</p>
+
+<p>
+  <strong>Entry date:</strong>
+  <%= @client.entry_date %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @client.size %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @client.contact_name %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @client.industry %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>
