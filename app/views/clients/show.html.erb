@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Client: <%= @client.name %></h1>
+
 <p>
   <strong>Name:</strong>
   <%= @client.name %>
@@ -69,6 +71,43 @@
   <strong>Industry:</strong>
   <%= @client.industry %>
 </p>
+
+<br>
+<h2>Tickets</h2>
+<% @client.tickets.each do |ticket| %>
+  <p>
+    <strong>Created on:</strong>
+    <%= ticket.date_created %>
+  </p>
+
+  <p>
+    <strong>Feedback:</strong>
+    <%= ticket.feedback %>
+  </p>
+  <p>
+    <%= link_to 'Destroy Ticket', [ticket.client, ticket],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>
+
+<br>
+
+<h2>Add a ticket:</h2>
+<%= form_for([@client, @client.tickets.build]) do |f| %>
+  <p>
+    <%= f.label :date_created %><br>
+    <%= f.date_select :date_created, :start_year => 2010, :end_year => 2016 %>
+  </p>
+  <p>
+    <%= f.label :Feedback %><br>
+    <%= f.text_area :feedback %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 
 <%= link_to 'Edit', edit_client_path(@client) %> |
 <%= link_to 'Back', clients_path %>
