@@ -6,7 +6,7 @@ Then you can run CRM 2000!
 ### Potential TODO ###
 
 * Customer Acquisition?
-  * How do we actually support this?
+  * List customers with no prior tickets or purchases
 
 * Customer Retention
   * sort customers by least recent interaction
