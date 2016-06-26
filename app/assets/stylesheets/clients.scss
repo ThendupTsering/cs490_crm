@@ -1,3 +1,44 @@
 // Place all the styles related to the Clients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  text-align: center;
+}
+
+a {
+  color: #990000;
+}
+
+a:hover {
+  color: #4d0000;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+th {
+  background-color: #939393;
+  font-size: 16px;
+}
+
+tbody {
+  text-align: center;
+}
+
+tr:hover {
+  background-color: #3d3d3d;
+}
+
+tr:nth-child(even) {
+  background-color: #acacac;
+}
+
+tr:nth-child(odd) {
+  background-color: #d2d2d2;
+}
+
+td {
+  padding: 10px;
+}
