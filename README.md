@@ -1,6 +1,8 @@
 # README #
 
 Get yourself some ruby and some rails!
+Migrate the db!
+seed the db!
 Then you can run CRM 2000!
 
 ### Potential TODO ###
