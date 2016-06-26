@@ -7,6 +7,7 @@ Then you can run CRM 2000!
 
 * Customer Acquisition?
   * List customers with no prior tickets or purchases
+  * calculate which demographics have been most profitable?
 
 * Customer Retention
   * sort customers by least recent interaction
