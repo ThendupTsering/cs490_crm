@@ -42,3 +42,11 @@ tr:nth-child(odd) {
 td {
   padding: 10px;
 }
+
+.field:nth-child(even) {
+  background-color: #acacac;
+}
+
+.field:nth-child(odd) {
+  background-color: #d2d2d2;
+}
