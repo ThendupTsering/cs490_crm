@@ -21,7 +21,7 @@ Client.create([
     entry_date: '2016-06-23',
     size: 1500,
     contact_name: 'Tom Bailey',
-    industry: 'Auto Manufacturer',
+    industry: 'Auto Manufacturer'
   },
   {
     name: 'Thendup Tsering',
@@ -37,7 +37,7 @@ Client.create([
     entry_date: '2016-06-23',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A',
+    industry: 'N/A'
   },
   {
     name: 'Joseph Chouinard',

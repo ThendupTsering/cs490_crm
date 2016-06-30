@@ -4,6 +4,11 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding: 0px;
+  margin-top: 100px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
 
 p, ol, ul, td {
@@ -18,22 +23,9 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+    padding: 10px;
   }
 }
 
