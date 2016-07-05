@@ -76,7 +76,7 @@ td {
   background-color: #d2d2d2;
 }
 
-.ticket_holder, .return_holder {
+.ticket_holder, .return_holder, .transaction_holder {
   display: inline-block;
   width: 300px;
   height: 100%;
@@ -84,7 +84,7 @@ td {
   float: left;
 }
 
-.ticket_maker, .return_maker {
+.ticket_maker, .return_maker, .transaction_maker {
   display: inline-block;
   width: 300px;
   height: 100%;

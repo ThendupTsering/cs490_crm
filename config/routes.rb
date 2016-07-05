@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  resources :salespeople do
-    resources :tickets
-  end
+  resources :salespeople
   resources :products
   resources :clients do
     resources :tickets
     resources :returns
-    resources :salespeople
+    resources :transactions do
+      resources :products
+    end
   end
   root :to => "home#index"
 

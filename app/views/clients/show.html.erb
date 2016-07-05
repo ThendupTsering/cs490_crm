@@ -84,6 +84,64 @@
     </div>
   </div>
 
+  <div class="transaction_holder">
+    <h2>Transactions</h2>
+    <% if @client.transactions.length == 0 %>
+      <h3>No transactions for this client</h3>
+    <% end %>
+    <% @client.transactions.each do |transaction| %>
+      <p>
+        <strong>Product:</strong>
+        <%= transaction.product.name %>
+      </p>
+      <p>
+        <strong>Status:</strong>
+        <%= transaction.status %>
+      </p>
+      <p>
+        <strong>Open Date:</strong>
+        <%= transaction.open_date %>
+      </p>
+      <p>
+        <strong>Close Date:</strong>
+        <%= transaction.close_date %>
+      </p>
+      <p>
+        <strong>Sold By:</strong>
+        <%= transaction.salesperson == nil ? "No one" : transaction.salesperson.name %>
+      </p>
+      <br>
+    <% end %>
+    <br><br>
+    <div class="transaction_maker">
+      <h2>Make a transaction:</h2>
+      <%= form_for([@client, @client.transactions.build]) do |f| %>
+        <p>
+          <%= f.label :product %><br>
+          <%= f.collection_select :product_id, Product.all, :id, :name %>
+        </p>
+        <p>
+          <%= f.label :status %><br>
+          <%= f.text_field :status %>
+        </p>
+        <p>
+          <%= f.label :date_opened %><br>
+          <%= f.date_select :open_date, :start_year => 2010, :end_year => 2016 %>
+        </p>
+        <p>
+          <%= f.label :date_closed %><br>
+          <%= f.date_select :close_date, :start_year => 2016, :end_year => 2020 %>
+        </p>
+        <p>
+          <%= f.label :sold_by %><br>
+          <%= f.collection_select :salesperson_id, Salesperson.all, :id, :name %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </div>
+  </div>
   <div class="ticket_holder">
     <h2>Tickets</h2>
     <% if @client.tickets.length == 0 %>
