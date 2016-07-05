@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :products
   resources :clients do
     resources :tickets
+    resources :returns
     resources :salespeople
   end
   root :to => "home#index"

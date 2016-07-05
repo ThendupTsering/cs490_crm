@@ -1,10 +1,7 @@
-<div class="header">
-  <span style="float: left;"><%=image_tag("Logo.png")%></span>
-  <h1>Product Directory</h1>
-</div>
-<br>
-
 <p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
 <table>
   <thead>
     <tr>
@@ -29,8 +26,7 @@
   </tbody>
 </table>
 
-<div style="margin: 20px;">
-  <%= link_to 'New Product', new_product_path %> |
-  <%= link_to 'Home', root_path %>
-</div>
-<%= render 'footer' %>
+<br>
+
+<%= link_to 'New Product', new_product_path %> |
+<%= link_to 'Home', root_path %>

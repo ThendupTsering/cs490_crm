@@ -16,8 +16,30 @@
   </div>
 </div>
 
+<div class="return_holder">
+  <h2>Returns made</h2>
+  <% if @product.returns.length == 0 %>
+    <p> No returns for this product </p>
+  <% end %>
+  <% @product.returns.each do |single_return| %>
+    <p>
+      <strong>Returned by:</strong>
+      <%= single_return.client.name %>
+    </p>
+    <p>
+      <strong>Reason for return:</strong>
+      <%= single_return.reason %>
+    </p>
+    <p>
+      <strong>Date of return:</strong>
+      <%= single_return.return_date %>
+    </p>
+  <% end %>
+</div>
+
 <div style="clear:both;"></div>
 <div style="margin: 20px;">
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to 'Back', products_path %>
 </div>
+<%= render 'footer' %>
