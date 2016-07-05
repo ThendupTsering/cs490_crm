@@ -77,10 +77,18 @@
       <strong>Industry:</strong>
       <%= @client.industry %>
     </div>
+
+    <div style="margin: 20px">
+    <%= link_to 'Edit', edit_client_path(@client) %> |
+    <%= link_to 'Back', clients_path %>
+    </div>
   </div>
 
   <div class="ticket_holder">
     <h2>Tickets</h2>
+    <% if @client.tickets.length == 0 %>
+      <h3>No tickets for this client</h3>
+    <% end %>
     <% @client.tickets.each do |ticket| %>
       <p>
         <strong>Created on:</strong>
@@ -101,32 +109,72 @@
                      method: :delete,
                      data: { confirm: 'Are you sure?' } %>
       </p>
+      <br>
     <% end %>
+    <br><br>
+    <div class="ticket_maker">
+      <h2>Add a ticket:</h2>
+      <%= form_for([@client, @client.tickets.build]) do |f| %>
+        <p>
+          <%= f.label :date_created %><br>
+          <%= f.date_select :date_created, :start_year => 2010, :end_year => 2016 %>
+        </p>
+        <p>
+          <%= f.label :Feedback %><br>
+          <%= f.text_area :feedback %>
+        </p>
+        <p>
+          <%= f.label :assign_to %><br>
+          <%= f.collection_select :salesperson_id, Salesperson.all, :id, :name %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </div>
   </div>
-  <div class="ticket_maker">
-    <h2>Add a ticket:</h2>
-    <%= form_for([@client, @client.tickets.build]) do |f| %>
-      <p>
-        <%= f.label :date_created %><br>
-        <%= f.date_select :date_created, :start_year => 2010, :end_year => 2016 %>
-      </p>
-      <p>
-        <%= f.label :Feedback %><br>
-        <%= f.text_area :feedback %>
-      </p>
-      <p>
-        <%= f.label :assign_to %><br>
-        <%= f.collection_select :salesperson_id, Salesperson.all, :id, :name %>
-      </p>
-      <p>
-        <%= f.submit %>
-      </p>
+  <div class="return_holder">
+    <h2>Returns</h2>
+    <% if @client.returns.length == 0 %>
+      <h3>No returns made by this client</h3>
     <% end %>
+    <% @client.returns.each do |single_return| %>
+      <p>
+        <strong>Product:</strong>
+        <%= single_return.product.name %>
+      </p>
+      <p>
+        <strong>Reason:</strong>
+        <%= single_return.reason %>
+      </p>
+      <p>
+        <strong>Date Returned:</strong>
+        <%= single_return.return_date %>
+      </p>
+      <br>
+    <% end %>
+    <br><br>
+    <div class="return_maker">
+      <h2>Make a return:</h2>
+      <%= form_for([@client, @client.returns.build]) do |f| %>
+        <p>
+          <%= f.label :product %><br>
+          <%= f.collection_select :product_id, Product.all, :id, :name %>
+        </p>
+        <p>
+          <%= f.label :Reason %><br>
+          <%= f.text_area :reason %>
+        </p>
+        <p>
+          <%= f.label :return_date %><br>
+          <%= f.date_select :return_date, :start_year => 2010, :end_year => 2016 %>
+        </p>
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </div>
   </div>
 </div>
 <div style="clear:both;"></div>
-<div style="margin: 20px">
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
-</div>
 <%= render 'footer' %>
