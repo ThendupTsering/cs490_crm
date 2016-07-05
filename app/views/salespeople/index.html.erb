@@ -10,6 +10,7 @@
     <tr>
       <th>Name</th>
       <th>Team</th>
+      <th>Transactions</th>
       <th>Tickets</th>
       <th colspan="3"></th>
     </tr>
@@ -20,6 +21,7 @@
       <tr>
         <td><%= salesperson.name %></td>
         <td><%= salesperson.team %></td>
+        <td><%= salesperson.transactions.length %></td>
         <td><%= salesperson.tickets.length %></td>
         <td><%= link_to 'Show', salesperson %></td>
         <td><%= link_to 'Edit', edit_salesperson_path(salesperson) %></td>

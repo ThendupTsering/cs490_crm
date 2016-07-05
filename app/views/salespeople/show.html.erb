@@ -3,10 +3,9 @@
   <h1>Salesperson: <%= @salesperson.name %></h1>
 </div>
 <p id="notice"><%= notice %></p>
-
 <div class="field_holder">
   <p>
-    <strong>Name: </strong>
+    <strong>Name:</strong>
     <%= @salesperson.name %>
   </p>
   <p>
@@ -14,6 +13,37 @@
     <%= @salesperson.team %>
   </p>
 </div>
+
+<div class="transaction_holder">
+  <h2>Transactions</h2>
+  <% if @salesperson.transactions.length == 0 %>
+    <h3>No transactions made with this salesperson</h3>
+  <% end %>
+  <% @salesperson.transactions.each do |transaction| %>
+    <p>
+      <strong>Product:</strong>
+      <%= transaction.product.name %>
+    </p>
+    <p>
+      <strong>Client:</strong>
+      <%= transaction.client == nil ? "No one" : transaction.client.name %>
+    </p>
+    <p>
+      <strong>Status:</strong>
+      <%= transaction.status %>
+    </p>
+    <p>
+      <strong>Open Date:</strong>
+      <%= transaction.open_date %>
+    </p>
+    <p>
+      <strong>Close Date:</strong>
+      <%= transaction.close_date %>
+    </p>
+    <br>
+  <% end %>
+</div>
+
 <div class="ticket_holder">
   <h2>Tickets assigned</h2>
   <% if @salesperson.tickets.length == 0 %>
@@ -24,7 +54,6 @@
       <strong>Created on:</strong>
       <%= ticket.date_created %>
     </p>
-
     <p>
       <strong>Feedback:</strong>
       <%= ticket.feedback %>

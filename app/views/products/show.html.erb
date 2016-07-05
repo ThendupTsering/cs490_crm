@@ -15,7 +15,35 @@
     <%= @product.price %>
   </div>
 </div>
-
+<div class="transaction_holder">
+  <h2>Transactions</h2>
+  <% if @product.transactions.length == 0 %>
+    <h3>No transactions made for this product</h3>
+  <% end %>
+  <% @product.transactions.each do |transaction| %>
+    <p>
+      <strong>Client:</strong>
+      <%= transaction.client.name %>
+    </p>
+    <p>
+      <strong>Sales Representative:</strong>
+      <%= transaction.salesperson == nil ? "No one" : transaction.salesperson.name %>
+    </p>
+    <p>
+      <strong>Status:</strong>
+      <%= transaction.status %>
+    </p>
+    <p>
+      <strong>Open Date:</strong>
+      <%= transaction.open_date %>
+    </p>
+    <p>
+      <strong>Close Date:</strong>
+      <%= transaction.close_date %>
+    </p>
+    <br>
+  <% end %>
+</div>
 <div class="return_holder">
   <h2>Returns made</h2>
   <% if @product.returns.length == 0 %>
