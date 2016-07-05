@@ -4,14 +4,14 @@
 </div>
 <p id="notice"><%= notice %></p>
 <div class="field_holder">
-  <p>
+  <div class="field">
     <strong>Name:</strong>
     <%= @salesperson.name %>
-  </p>
-  <p>
+  </div>
+  <div class="field">
     <strong>Team: </strong>
     <%= @salesperson.team %>
-  </p>
+  </div>
 </div>
 
 <div class="transaction_holder">
@@ -45,7 +45,7 @@
 </div>
 
 <div class="ticket_holder">
-  <h2>Tickets assigned</h2>
+  <h2>Tickets Assigned</h2>
   <% if @salesperson.tickets.length == 0 %>
     <p> No tickets assigned </p>
   <% end %>

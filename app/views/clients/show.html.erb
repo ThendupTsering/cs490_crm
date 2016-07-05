@@ -109,6 +109,11 @@
         <strong>Sold By:</strong>
         <%= transaction.salesperson == nil ? "No one" : transaction.salesperson.name %>
       </p>
+      <p>
+        <%= link_to 'Destroy transaction', [transaction.client, transaction],
+                     method: :delete,
+                     data: { confirm: 'Are you sure?' } %>
+      </p>
       <br>
     <% end %>
     <br><br>
@@ -207,6 +212,11 @@
       <p>
         <strong>Date Returned:</strong>
         <%= single_return.return_date %>
+      </p>
+      <p>
+        <%= link_to 'Destroy Return', [single_return.client, single_return],
+                     method: :delete,
+                     data: { confirm: 'Are you sure?' } %>
       </p>
       <br>
     <% end %>
