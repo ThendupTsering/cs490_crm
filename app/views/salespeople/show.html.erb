@@ -12,6 +12,10 @@
     <strong>Team: </strong>
     <%= @salesperson.team %>
   </div>
+  <div style="margin: 20px">
+    <%= link_to 'Edit', edit_salesperson_path(@salesperson) %> |
+    <%= link_to 'Back', salespeople_path %>
+  </div>
 </div>
 
 <div class="transaction_holder">
@@ -62,8 +66,4 @@
 </div>
 
 <div style="clear:both;"></div>
-<div style="margin: 20px">
-  <%= link_to 'Edit', edit_salesperson_path(@salesperson) %> |
-  <%= link_to 'Back', salespeople_path %>
-</div>
 <%= render 'footer' %>

@@ -14,6 +14,10 @@
     <strong>Price:</strong>
     <%= @product.price %>
   </div>
+  <div style="margin: 20px;">
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </div>
 </div>
 <div class="transaction_holder">
   <h2>Transactions</h2>
@@ -62,12 +66,8 @@
       <strong>Date of return:</strong>
       <%= single_return.return_date %>
     </p>
+    <br>
   <% end %>
 </div>
-
 <div style="clear:both;"></div>
-<div style="margin: 20px;">
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
-</div>
 <%= render 'footer' %>
