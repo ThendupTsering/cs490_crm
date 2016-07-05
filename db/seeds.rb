@@ -296,7 +296,6 @@ Client.create([
     industry: 'N/A'
   }
 ])
-
 Product.create([
   {
     name: 'Fancy Pen',

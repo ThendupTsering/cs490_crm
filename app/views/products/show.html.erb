@@ -1,14 +1,23 @@
+<div class="header">
+  <span style="float: left;"><%=image_tag("Logo.png")%></span>
+  <h1>Product: <%= @product.name %></h1>
+</div>
+
 <p id="notice"><%= notice %></p>
+<div class="field_holder">
+  <div class="field">
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+  <div class="field">
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </div>
+</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div style="clear:both;"></div>
+<div style="margin: 20px;">
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</div>
