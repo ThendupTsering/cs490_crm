@@ -10,5 +10,23 @@
   <%= @salesperson.team %>
 </p>
 
+<div class="ticket_holder">
+  <h2>Tickets assigned</h2>
+  <% if @salesperson.tickets.length == 0 %>
+    <p> No tickets assigned </p>
+  <% end %>
+  <% @salesperson.tickets.each do |ticket| %>
+    <p>
+      <strong>Created on:</strong>
+      <%= ticket.date_created %>
+    </p>
+
+    <p>
+      <strong>Feedback:</strong>
+      <%= ticket.feedback %>
+    </p>
+  <% end %>
+</div>
+
 <%= link_to 'Edit', edit_salesperson_path(@salesperson) %> |
 <%= link_to 'Back', salespeople_path %>

@@ -91,6 +91,11 @@
         <strong>Feedback:</strong>
         <%= ticket.feedback %>
       </p>
+
+      <p>
+        <strong>Assigned to:</strong>
+        <%= ticket.salesperson == nil ? "No one" : ticket.salesperson.name %>
+      </p>
       <p>
         <%= link_to 'Destroy Ticket', [ticket.client, ticket],
                      method: :delete,
@@ -108,6 +113,10 @@
       <p>
         <%= f.label :Feedback %><br>
         <%= f.text_area :feedback %>
+      </p>
+      <p>
+        <%= f.label :assign_to %><br>
+        <%= f.collection_select :salesperson_id, Salesperson.all, :id, :name %>
       </p>
       <p>
         <%= f.submit %>

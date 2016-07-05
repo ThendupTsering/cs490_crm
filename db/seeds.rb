@@ -296,3 +296,145 @@ Client.create([
     industry: 'N/A'
   }
 ])
+
+Product.create([
+  {
+    name: 'Fancy Pen',
+    price: 180
+  },
+  {
+    name: 'Standard Pen',
+    price: 1
+  },
+  {
+    name: 'Invisible Inkwell',
+    price: 8
+  },
+  {
+    name: 'Standard Ink Cartridge - Refill',
+    price: 3
+  },
+  {
+    name: 'Budget Pencil - 10 Pack',
+    price: 2
+  },
+  {
+    name: 'Budget Pencil - 3 Pack',
+    price: 1
+  },
+  {
+    name: 'PenPal 50th Anniversary Pen',
+    price: 50
+  },
+  {
+    name: 'Pure Gold Pen',
+    price: 1000
+  },
+  {
+    name: 'Pen Display Case',
+    price: 48
+  },
+  {
+    name: 'Pen/Pencil Multipack',
+    price: 4
+  },
+  {
+    name: 'Eraser Set',
+    price: 2
+  },
+  {
+    name: 'Pen Eraser',
+    price: 5
+  },
+  {
+    name: 'Childrens Coloured Pencil Set',
+    price: 7
+  },
+  {
+    name: 'Childrens Coloured Pencil Set - Deluxe',
+    price: 20
+  },
+  {
+    name: 'Feather Quill Set',
+    price: 33
+  },
+  {
+    name: 'Notebook & Pen Set for Writers',
+    price: 23
+  },
+  {
+    name: 'Edible Pencil Set',
+    price: 9
+  },
+  {
+    name: 'Back2School Pencil/Pen/Notebook Set',
+    price: 24
+  }
+])
+
+Salesperson.create([
+  {
+    name: 'David Bennet',
+    team: 'HR'
+  },
+  {
+    name: 'Dwayne Johnson',
+    team: 'Marketing'
+  },
+  {
+    name: 'Benjamin Kenobi',
+    team: 'B2B Sales'
+  },
+  {
+    name: 'Linda Liu',
+    team: 'B2C Sales'
+  },
+  {
+    name: 'Eric Redgold',
+    team: 'B2C Sales'
+  },
+  {
+    name: 'Lenard Smith',
+    team: 'Marketing'
+  },
+  {
+    name: 'Lenard Smith',
+    team: 'Marketing'
+  },
+  {
+    name: 'Homer Simpson',
+    team: 'HR'
+  },
+  {
+    name: 'Bill Nye',
+    team: 'B2C Sales'
+  },
+  {
+    name: 'Jason Smith',
+    team: 'B2B Sales'
+  },
+  {
+    name: 'Stanley Robertson',
+    team: 'B2B Sales'
+  },
+  {
+    name: 'Geralt Riviera',
+    team: 'B2C Sales'
+  },
+  {
+    name: 'Miles Edgeworth',
+    team: 'HR'
+  },
+  {
+    name: 'Richard Armitage',
+    team: 'HR'
+  },
+  {
+    name: 'Jake Pauling',
+    team: 'Marketing'
+  },
+  {
+    name: 'Ubaldino Valdez',
+    team: 'Marketing'
+  }
+])
