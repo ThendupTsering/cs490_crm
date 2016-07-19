@@ -1,4 +1,5 @@
 class TransactionsController < ApplicationController
+  include ClientHelper
   before_action :set_client
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
 
@@ -28,6 +29,7 @@ class TransactionsController < ApplicationController
         format.json { render json: @transaction.errors, status: :unprocessable_entity }
       end
     end
+    compute_score(@client)
   end
 
   def update

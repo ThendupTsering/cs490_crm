@@ -10,4 +10,5 @@ class Client < ActiveRecord::Base
   CAREER = ["","Developer","Marketing","Writer","Singer","Actor","Defense Attorney","Consultant","Information Technology"]
   INDUSTRY = ["","Auto Manufacturer","Retail","Biotech","Education","Television Broadcast"]
   ENTRY_POINT = ["","Social Media","Direct Mail","Email","Writing Contest","Retail Brochure","Phone"]
+  SORT = ["asc","desc"]
 end

@@ -1,11 +1,13 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
   helper_method :compute_score
+  include ClientHelper
 
   # GET /clients
   # GET /clients.json
   def index
     @q = Client.ransack(params[:q])
+    @q.sorts = 'score desc'
     @clients = @q.result(distinct: true)
   end
 
@@ -23,21 +25,7 @@ class ClientsController < ApplicationController
   def edit
   end
 
-  def compute_score(client)
-    @recency = 0
-    @frequency = 0
-    @monetary = 0
-    score = 0;
 
-    client.transactions.each do |c|
-      @frequency = @frequency + 1
-      @monetary = c.count * c.product.price
-      score = score + @frequency + @monetary
-    end
-
-    client.update_attributes score: score
-    client.score
-  end
 
   # POST /clients
   # POST /clients.json
