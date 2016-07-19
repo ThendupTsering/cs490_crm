@@ -4,6 +4,19 @@
 </div>
 <br>
 
+<%= search_form_for(@q) do |f| %>
+  <%= f.label :entity_type %>
+  <%= f.search_field :entity_type_cont %>
+  <br>
+  <%= f.label :name %>
+  <%= f.search_field :name_cont %>
+  <br>
+  <%= f.label :industry %>
+  <%= f.search_field :industry_cont %>
+
+  <%= f.submit %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 <table>
   <thead>
