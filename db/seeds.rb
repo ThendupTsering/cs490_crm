@@ -415,10 +415,6 @@ Salesperson.create([
     team: 'Marketing'
   },
   {
-    name: 'Lenard Smith',
-    team: 'Marketing'
-  },
-  {
     name: 'Homer Simpson',
     team: 'HR'
   },
@@ -453,5 +449,161 @@ Salesperson.create([
   {
     name: 'Ubaldino Valdez',
     team: 'Marketing'
+  }
+])
+
+Transaction.create([
+  {
+    client: Client.where(name: 'Justin Bieber').first,
+    salesperson: Salesperson.where(name: 'Bill Nye').first,
+    product: Product.where(name: 'Fancy Pen').first,
+    status: 'Closed',
+    open_date: Date.parse('10th April 2010'),
+    close_date: Date.parse('11th April 2010'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'University of Waterloo').first,
+    salesperson: Salesperson.where(name: 'Jason Smith').first,
+    product: Product.where(name: 'Invisible Inkwell').first,
+    status: 'Closed',
+    open_date: Date.parse('23rd September 2012'),
+    close_date: Date.parse('24th September 2012'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Nicholas Cage').first,
+    salesperson: Salesperson.where(name: 'Jason Smith').first,
+    product: Product.where(name: 'Edible Pencil Set').first,
+    status: 'Closed',
+    open_date: Date.parse('29th January 2015'),
+    close_date: Date.parse('4th February 2015'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'University of Waterloo').first,
+    salesperson: Salesperson.where(name: 'Jason Smith').first,
+    product: Product.where(name: 'Budget Pencil - 10 Pack').first,
+    status: 'Closed',
+    open_date: Date.parse('9th August 2016'),
+    close_date: Date.parse('10th August 2016'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Jinteki Biotech').first,
+    salesperson: Salesperson.where(name: 'Eric Redgold').first,
+    product: Product.where(name: 'Pure Gold Pen').first,
+    status: 'Closed',
+    open_date: Date.parse('15th March 2016'),
+    close_date: Date.parse('16th March 2016'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Nero Severn').first,
+    salesperson: Salesperson.where(name: 'Lenard Smith').first,
+    product: Product.where(name: 'Invisible Inkwell').first,
+    status: 'Closed',
+    open_date: Date.parse('22nd June 2014'),
+    close_date: Date.parse('13rd June 2014'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Bill\'s Blenders').first,
+    salesperson: Salesperson.where(name: 'Stanley Robertson').first,
+    product: Product.where(name: 'Pen Display Case').first,
+    status: 'Closed',
+    open_date: Date.parse('19th April 2008'),
+    close_date: Date.parse('22nd April 2008'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Kate McCaffery').first,
+    salesperson: Salesperson.where(name: 'Stanley Robertson').first,
+    product: Product.where(name: 'Pen/Pencil Multipack').first,
+    status: 'Closed',
+    open_date: Date.parse('10th September 2007'),
+    close_date: Date.parse('15th September 2007'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Kate McCaffery').first,
+    salesperson: Salesperson.where(name: 'Stanley Robertson').first,
+    product: Product.where(name: 'Pen/Pencil Multipack').first,
+    status: 'Closed',
+    open_date: Date.parse('4th May 2015'),
+    close_date: Date.parse('5th May 2015'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'News Broadcast Network').first,
+    salesperson: Salesperson.where(name: 'Homer Simpson').first,
+    product: Product.where(name: 'Eraser Set').first,
+    status: 'Closed',
+    open_date: Date.parse('9th April 2010'),
+    close_date: Date.parse('9th April 2010'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Phillip Breen').first,
+    salesperson: Salesperson.where(name: 'Richard Armitage').first,
+    product: Product.where(name: 'PenPal 50th Anniversary Pen').first,
+    status: 'Closed',
+    open_date: Date.parse('17th December 2012'),
+    close_date: Date.parse('18th December 2012'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Toyota Inc').first,
+    salesperson: Salesperson.where(name: 'Homer Simpson').first,
+    product: Product.where(name: 'Notebook & Pen Set for Writers').first,
+    status: 'Closed',
+    open_date: Date.parse('10th June 2005'),
+    close_date: Date.parse('13th June 2005'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Phillip Breen').first,
+    salesperson: Salesperson.where(name: 'Stanley Robertson').first,
+    product: Product.where(name: 'Standard Pen').first,
+    status: 'Closed',
+    open_date: Date.parse('16th May 2016'),
+    close_date: Date.parse('17th May 2016'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'April May').first,
+    salesperson: Salesperson.where(name: 'Geralt Riviera').first,
+    product: Product.where(name: 'Feather Quill Set').first,
+    status: 'Closed',
+    open_date: Date.parse('19th October 2014'),
+    close_date: Date.parse('20th October 2014'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Will Powers').first,
+    salesperson: Salesperson.where(name: 'Geralt Riviera').first,
+    product: Product.where(name: 'Feather Quill Set').first,
+    status: 'Closed',
+    open_date: Date.parse('7th November 2015'),
+    close_date: Date.parse('8th November 2015'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Laura Ipsum').first,
+    salesperson: Salesperson.where(name: 'Jason Smith').first,
+    product: Product.where(name: 'Eraser Set').first,
+    status: 'Closed',
+    open_date: Date.parse('1st May 2014'),
+    close_date: Date.parse('2nd May 2014'),
+    count: 1
+  },
+  {
+    client: Client.where(name: 'Akitaro Watanabe').first,
+    salesperson: Salesperson.where(name: 'Miles Edgeworth').first,
+    product: Product.where(name: 'Back2School Pen/Pencil/Notebook Set').first,
+    status: 'Closed',
+    open_date: Date.parse('10th July 2011'),
+    close_date: Date.parse('11th July 2011'),
+    count: 1
   }
 ])
