@@ -93,6 +93,14 @@
         <%= transaction.product.name %>
       </p>
       <p>
+        <strong>Total Cost:</strong>
+        <%= transaction.total %>
+      </p>
+      <p>
+        <strong>Purchased Amount:</strong>
+        <%= transaction.count %>
+      </p>
+      <p>
         <strong>Status:</strong>
         <%= transaction.status %>
       </p>
@@ -122,6 +130,14 @@
         <p>
           <%= f.label :product %><br>
           <%= f.collection_select :product_id, Product.all, :id, :name %>
+        </p>
+        <p>
+          <%= f.label :products_sold %><br>
+          <%= f.text_field :count %>
+        </p>
+        <p>
+          <%= f.label :total %><br>
+          <%= f.text_field :total %>
         </p>
         <p>
           <%= f.label :status %><br>

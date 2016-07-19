@@ -6,14 +6,17 @@
 
 <%= search_form_for(@q) do |f| %>
   <%= f.label :entity_type %>
-  <%= f.search_field :entity_type_cont %>
+  <%= f.collection_select :entity_type_cont, Client::ENTITY_TYPES, :to_s, :to_s, :include_blank => false%>
   <br>
-  <%= f.label :name %>
-  <%= f.search_field :name_cont %>
+  <%= f.label :career %>
+  <%= f.collection_select :career_cont, Client::CAREER, :to_s, :to_s, :include_blank => false%>
   <br>
   <%= f.label :industry %>
-  <%= f.search_field :industry_cont %>
-
+  <%= f.collection_select :industry_cont, Client::INDUSTRY, :to_s, :to_s, :include_blank => false%>
+  <br>
+  <%= f.label :entry_point %>
+  <%= f.collection_select :industry_cont, Client::ENTRY_POINT, :to_s, :to_s, :include_blank => false%>
+  <br>
   <%= f.submit %>
 <% end %>
 
@@ -35,6 +38,7 @@
       <th>Size</th>
       <th>Contact name</th>
       <th>Industry</th>
+      <th>Transaction</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -56,6 +60,7 @@
         <td><%= client.size %></td>
         <td><%= client.contact_name %></td>
         <td><%= client.industry %></td>
+        <td><%= client.transactions.length%></td>
         <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>

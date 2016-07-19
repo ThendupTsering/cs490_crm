@@ -72,6 +72,8 @@ ActiveRecord::Schema.define(version: 20160705044151) do
 
   create_table "transactions", force: :cascade do |t|
     t.string   "status"
+    t.integer  "total"
+    t.integer  "count"
     t.date     "open_date"
     t.date     "close_date"
     t.datetime "created_at",     null: false

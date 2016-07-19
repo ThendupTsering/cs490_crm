@@ -1,5 +1,6 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
+  helper_method :count_transactions
 
   # GET /clients
   # GET /clients.json
@@ -20,6 +21,10 @@ class ClientsController < ApplicationController
 
   # GET /clients/1/edit
   def edit
+  end
+
+  def count_transactions
+    @client = @client.transaction.status
   end
 
   # POST /clients
