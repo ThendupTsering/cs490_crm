@@ -53,6 +53,6 @@ class TransactionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transaction_params
-      params.require(:transaction).permit(:status, :total, :count, :open_date, :close_date, :client_id, :salesperson_id, :product_id)
+      params.require(:transaction).permit(:status, :count, :open_date, :close_date, :client_id, :salesperson_id, :product_id)
     end
 end

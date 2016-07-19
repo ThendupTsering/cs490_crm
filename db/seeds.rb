@@ -21,7 +21,8 @@ Client.create([
     entry_date: '2016-06-23',
     size: 1500,
     contact_name: 'Tom Bailey',
-    industry: 'Auto Manufacturer'
+    industry: 'Auto Manufacturer',
+    score: '0'
   },
   {
     name: 'Thendup Tsering',
@@ -37,7 +38,8 @@ Client.create([
     entry_date: '2016-06-23',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'Joseph Chouinard',
@@ -53,7 +55,8 @@ Client.create([
     entry_date: '2012-08-20',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'Phillip Breen',
@@ -69,7 +72,8 @@ Client.create([
     entry_date: '2000-10-01',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
 	{
     name: 'Laura Ipsum',
@@ -85,7 +89,8 @@ Client.create([
     entry_date: '2010-07-07',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'Stans Stationary',
@@ -101,7 +106,8 @@ Client.create([
     entry_date: '1999-11-03',
     size: 15,
     contact_name: 'Stanley Gruber',
-    industry: 'Retail'
+    industry: 'Retail',
+    score: '0'
   },
   {
     name: 'Bill\'s Blenders',
@@ -117,7 +123,8 @@ Client.create([
     entry_date: '2006-01-12',
     size: 8,
     contact_name: 'Bill Bradbury',
-    industry: 'Retail'
+    industry: 'Retail',
+    score: '0'
   },
   {
     name: 'Justin Bieber',
@@ -133,7 +140,8 @@ Client.create([
     entry_date: '2001-04-03',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'Nicholas Cage',
@@ -149,7 +157,8 @@ Client.create([
     entry_date: '1990-05-07',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'April May',
@@ -165,7 +174,8 @@ Client.create([
     entry_date: '2012-03-03',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'Will Powers',
@@ -181,7 +191,8 @@ Client.create([
     entry_date: '2005-03-01',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'Jinteki Biotech',
@@ -197,7 +208,8 @@ Client.create([
     entry_date: '1992-09-09',
     size: 2500,
     contact_name: 'Hiroki Miyamoto',
-    industry: 'Biotech'
+    industry: 'Biotech',
+    score: '0'
   },
   {
     name: 'University of Waterloo',
@@ -213,7 +225,8 @@ Client.create([
     entry_date: '1975-04-07',
     size: 2184,
     contact_name: 'Feridun Hamdullahpur',
-    industry: 'Education'
+    industry: 'Education',
+    score: '0'
   },
   {
     name: 'Kate McCaffery',
@@ -229,7 +242,8 @@ Client.create([
     entry_date: '2006-04-03',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'Nero Severn',
@@ -245,7 +259,8 @@ Client.create([
     entry_date: '1999-03-22',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'News Broadcast Network',
@@ -261,7 +276,8 @@ Client.create([
     entry_date: '1996-11-20',
     size: 2500,
     contact_name: 'Jackson Howard',
-    industry: 'Television Broadcast'
+    industry: 'Television Broadcast',
+    score: '0'
   },
   {
     name: 'Ryon Knight',
@@ -277,7 +293,8 @@ Client.create([
     entry_date: '1990-01-23',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   },
   {
     name: 'Akitaro Watanabe',
@@ -293,7 +310,8 @@ Client.create([
     entry_date: '2005-10-12',
     size: 1,
     contact_name: 'N/A',
-    industry: 'N/A'
+    industry: 'N/A',
+    score: '0'
   }
 ])
 Product.create([

@@ -60,7 +60,7 @@
         <td><%= client.size %></td>
         <td><%= client.contact_name %></td>
         <td><%= client.industry %></td>
-        <td><%= client.transactions.length%></td>
+        <td><%= compute_score(client)%></td>
         <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>

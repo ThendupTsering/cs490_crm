@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160705044151) do
     t.integer  "size"
     t.string   "contact_name"
     t.string   "industry"
+    t.integer  "score"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

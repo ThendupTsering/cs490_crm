@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
-  helper_method :count_transactions
+  helper_method :compute_score
 
   # GET /clients
   # GET /clients.json
@@ -23,8 +23,20 @@ class ClientsController < ApplicationController
   def edit
   end
 
-  def count_transactions
-    @client = @client.transaction.status
+  def compute_score(client)
+    @recency = 0
+    @frequency = 0
+    @monetary = 0
+    score = 0;
+
+    client.transactions.each do |c|
+      @frequency = @frequency + 1
+      @monetary = c.count * c.product.price
+      score = score + @frequency + @monetary
+    end
+
+    client.update_attributes score: score
+    client.score
   end
 
   # POST /clients
@@ -75,6 +87,6 @@ class ClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :address, :entity_type, :email, :phone_no, :fax_no, :gender, :career, :birthday, :entry_point, :entry_date, :size, :contact_name, :industry)
+      params.require(:client).permit(:name, :address, :total, :entity_type, :email, :phone_no, :fax_no, :gender, :career, :birthday, :entry_point, :entry_date, :size, :contact_name, :industry)
     end
 end

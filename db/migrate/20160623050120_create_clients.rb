@@ -15,6 +15,7 @@ class CreateClients < ActiveRecord::Migration
       t.integer :size
       t.string :contact_name
       t.string :industry
+      t.integer :score
 
       t.timestamps null: false
     end
